@@ -1,4 +1,0 @@
-function test(){
-    getJoke("sports")
-
-}
