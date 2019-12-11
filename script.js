@@ -33,9 +33,9 @@ $(".mood").on("click", function() {
 
     })
 
-    .then(function(happyData) {
-        console.log(happyData);
-        moodObject.gifurl = happyData.data.image_original_url;
+    .then(function(gifData) {
+        console.log(gifData);
+        moodObject.gifurl = gifData.data.image_original_url;
 
        localStorage.setItem("moodObject", JSON.stringify(moodObject));
     
@@ -64,12 +64,54 @@ moodObject.joke = "here's a joke"
   
   $(".music").on("click", function() {
 
-    moodObject.music = "here's a song";
+          
+        var musicKey = $(this).attr("id");
+             console.log("click"); 
+             console.log(musicKey);
+            $.ajax({
+              type: 'GET',
+              url: 'https://www.googleapis.com/youtube/v3/search',
+              data: {
+                  key: 'AIzaSyBp1mUKg3aLUNqO-5bDei4ReLNbwPTD3kw',
+                  q: "'" + musicKey + "'",
+                  part: 'snippet',
+                  maxResults: 1,
+                  type: 'video',
+                  videoEmbeddable: true,
+              },
+              
+              success: function(data){
+                  embedVideo(data)
+                  
+                  console.log(data);
+              },
+              error: function(response){
+                  console.log("Request Failed");
+              }
+            });
+          
+        
+          function embedVideo(data) {
+            $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
+            $('h3').text(data.items[0].snippet.title)
+            $('.description').text(data.items[0].snippet.description)
+        }
+       
 
-    localStorage.setItem("moodObject", JSON.stringify(moodObject));
+    })
 
-    window.location.href = "finalpage.html"
-  })
+        function music(data){
+            console.log(music);
+
+            moodObject.music = data.item[0].id.videoId;
+
+            localStorage.setItem("moodObject", JSON.stringify(moodObject));
+
+            window.location.href = "finalpage.html"
+        }
+    
+    
+ 
 
   if (window.location.pathname === "/finalpage.html") {
       console.log("we are on the final page");
@@ -83,10 +125,4 @@ moodObject.joke = "here's a joke"
       $("#music").text(moodObject.music)
 
   }
-console.log(window.location.pathname);
-
-
-
-    
-
-
+console.log(window.location.pathname)

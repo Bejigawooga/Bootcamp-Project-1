@@ -1,3 +1,14 @@
+html { 
+  background:  url(https://media.giphy.com/media/3oxHQDX0bmnhyYrFwQ/giphy.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+body {
+  height: 100%;
+  background:  url(https://media.giphy.com/media/3oxHQDX0bmnhyYrFwQ/giphy.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+
+
 .rainbow-box {
     
     border: 5px solid transparent;
