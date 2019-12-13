@@ -7,6 +7,7 @@
     <title>Mood Boost</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/723d8fa4ad.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -15,67 +16,68 @@
     <!-- //animals, movies, memes, cars, sports, cartoons.  -->
     <div class="container">
         <nav class="title-text">
-            <p><H1>Mood Boost</H1></p>
+            <p><H1>Mood Boost®</H1></p>
         </nav>
-        <p>Choose a Theme</p>
+        <p class="choose moodP"> Choose a topic to get a Giggle by giving your mouse a little jiggle<i class="far fa-hand-point-down"></i></p>
         <div class="row">
             <div class="col-lg-4">
-                <div class="card rainbow-box theme">
+                <div onclick="getJoke('animal')" id="animal" class="card rainbow-box theme">
                    <div class="card-body">
                        <img class="theme-style" src="images\animals.gif">
                    </div> 
                 </div>  
-                <p>Animals</p>
+                <p class="choices">Animals</p>
             </div>
             <div class="col-lg-4">
-                    <div class="card rainbow-box theme">
+                    <div onclick="getJoke('movies')"id="movies" class="card rainbow-box theme">
                             <div class="card-body">
                           <img class="theme-style"src="images\movies.gif">
                        </div> 
                     </div> 
-                    <p>Movies</p>  
+                    <p class="choices">Movies</p>  
                 </div> 
                 <div class="col-lg-4">
-                        <div class="card rainbow-box theme">
+                        <div onclick="getJoke('memes')"id="memes" class="card rainbow-box theme">
                            <div class="card-body">
                                 <img class="theme-style" src="images\meme.gif"> 
                            </div>
                           </div> 
-                          <p>Memes</p> 
+                          <p class="choices">Memes</p> 
                     </div>  
                                           
         </div> 
         <div class="row">
                 <div class="col-lg-4">
-                    <div class="card rainbow-box theme">
+                    <div onclick="getJoke('car')"id="car" class="card rainbow-box theme">
                        <div class="card-body">
                            <img class="theme-style" src="images\cars.gif">
                        </div> 
                     </div> 
-                    <p>Cars</p> 
+                    <p class="choices">Cars</p> 
                 </div>
                 <div class="col-lg-4">
-                        <div  class="card rainbow-box theme">
+                        <div onclick="getJoke('sports')"id="sports"  class="card rainbow-box theme">
                            <div class="card-body">
                                <img class="theme-style" src="images\sports.gif">
                            </div> 
                         </div> 
-                        <p>Sports</p> 
+                        <p class="choices">Sports</p> 
                     </div> 
                     <div class="col-lg-4">
-                            <div  class="card rainbow-box theme">
+                            <div onclick="getJoke('cartoon')" id="cartoon" class="card rainbow-box theme">
                                <div class="card-body">
                                    <img class="theme-style" src="images\cartoons.gif">
                                </div> 
                             </div> 
-                            <p>Cartoons</p> 
+                            <p class="choices">Cartoons</p> 
                         </div>                       
             </div> 
        
                              
     </div>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src=script.js></script>  
+    <script src=jokes.js></script> 
 </body>
 </html>

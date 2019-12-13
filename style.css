@@ -1,10 +1,24 @@
+
 html { 
-  background:  url(https://media.giphy.com/media/3oxHQDX0bmnhyYrFwQ/giphy.gif) no-repeat center center fixed; 
+  background:  url(https://i.gifer.com/b5A.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+.lastPage {
+  background: url(https://media.giphy.com/media/zpzzO5WiWaozm/giphy.gif) no-repeat center center fixed;
+  background-size: cover;
+}
+.lastPageBody {
+  height: 100%;
+  background:  url(https://media.giphy.com/media/zpzzO5WiWaozm/giphy.gif) no-repeat center center fixed; 
+  background-size: cover;
+}
+.done{
+  background:  url(https://media.giphy.com/media/zpzzO5WiWaozm/giphy.gif) no-repeat center center fixed; 
   background-size: cover;
 }
 body {
   height: 100%;
-  background:  url(https://media.giphy.com/media/3oxHQDX0bmnhyYrFwQ/giphy.gif) no-repeat center center fixed; 
+  background:  url(https://i.gifer.com/b5A.gif) no-repeat center center fixed; 
   background-size: cover;
 }
 
@@ -14,10 +28,32 @@ body {
     border: 5px solid transparent;
     border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
     border-image-slice: 1; 
-     
-    
+        
   }
 
+.moodP {
+  font-family: 'Raleway', sans-serif;
+ 
+}
+.choose{
+  font-size: 25px;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+
+.footer {
+  color: blue;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.choices {
+  font-size: 20px;
+  color: rgb(0, 255, 234);
+  font-family: 'Raleway', sans-serif;
+}
 
     
 .gif-style {
@@ -59,8 +95,25 @@ h1{
     font-family: 'Permanent Marker', cursive;
     display: block;
     text-align: center;
-    font-size: 60px;
+    font-size: 70px;
+    color: yellow;
+    margin-bottom: 0px;
 
   }
+p{
+  color: white;
+  text-align: center;
+}
 
- 
+.joke {
+  color:black;
+  margin: 10px auto;
+  font-size: 20px;
+  background-color: white;
+}
+.last {
+  color: rgb(7, 7, 102);
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  background-color: white;
+}

@@ -7,6 +7,7 @@
     <title>Mood Boost</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/723d8fa4ad.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -14,11 +15,14 @@
 <body>
     
     <div class="container">
-        <div class="bg"></div>
         <nav class="title-text">
-            <p><H1>Mood Boost</H1></p>
+            <p><H1 class="neon">Mood Boost®</H1></p>            
+                 
         </nav>
-        <p>Choose your current Mood</p>
+        <div>
+            
+            
+        <p class="moodP choose">Choose your current mind state to get a quick boost<i class="far fa-hand-point-down"></i></p>
         <div class="row">
             <div class="col-lg-4">
                 
@@ -27,7 +31,7 @@
                        <img class="gif-style" src="images\happy.gif">
                    </div> 
                 </div>  
-                <p>Happy</p>
+                <p class="choices">Happy</p>
             </div>
             <div class="col-lg-4">
                     <div id="sad" class="card rainbow-box mood">
@@ -35,7 +39,7 @@
                           <img class="gif-style"src="images\sad.gif">
                        </div> 
                     </div> 
-                    <p>Sad</p>  
+                    <p class="choices">Sad</p>  
                 </div> 
                 <div class="col-lg-4">
                         <div id="worried" class="card rainbow-box mood">
@@ -43,7 +47,7 @@
                                 <img class="gif-style" src="images\worried.gif"> 
                            </div>
                           </div> 
-                          <p>Worried</p> 
+                          <p class="choices">Worried</p> 
                     </div>  
                                           
         </div> 
@@ -54,7 +58,7 @@
                            <img class="gif-style" src="images\surprised.gif">
                        </div> 
                     </div> 
-                    <p>Surprised</p> 
+                    <p class="choices">Surprised</p> 
                 </div>
                 <div class="col-lg-4">
                         <div id="annoyed" class="card rainbow-box mood">
@@ -62,7 +66,7 @@
                                <img class="gif-style" src="images\annoyed.gif">
                            </div> 
                         </div> 
-                        <p>Annoyed</p> 
+                        <p class="choices">Annoyed</p> 
                     </div> 
                     <div class="col-lg-4">
                             <div id="mad" class="card rainbow-box mood">
@@ -70,12 +74,12 @@
                                    <img class="gif-style" src="images\mad.gif">
                                </div> 
                             </div> 
-                            <p>Mad</p> 
+                            <p class="choices">Mad</p> 
                         </div>                       
             </div> 
             <div id="happygif"></div>
             
-       
+            <!-- <footer class="moodP footer">Creating fun one <i class="far fa-smile-beam"> at a time</i></footer>    -->
                              
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

@@ -47,20 +47,6 @@ $(".mood").on("click", function() {
   
         });
 });
-//this is the code that activates the function when the user clicks a theme to retrive a joke from
-$(".theme").on("click", function() {
-
-// ////below please add ajax from the joke api below
-moodObject.joke = "here's a joke"
-
-// ///this is the code that saves the joke theme choosen by user in local storage
-   localStorage.setItem("moodObject", JSON.stringify(moodObject));
-    
-// ///this is the code that moves the user to the following page
-    window.location.href = 'music.html';
-})
-
-
   
   $(".music").on("click", function() {
 
@@ -95,34 +81,30 @@ moodObject.joke = "here's a joke"
             $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
             $('h3').text(data.items[0].snippet.title)
             $('.description').text(data.items[0].snippet.description)
-        }
-       
-
-    })
-
-        function music(data){
-            console.log(music);
-
-            moodObject.music = data.item[0].id.videoId;
+        
+            moodObject.music = data;
 
             localStorage.setItem("moodObject", JSON.stringify(moodObject));
 
-            window.location.href = "finalpage.html"
-        }
-    
-    
- 
+            window.location.href = "finalpage.html";
+}
+    })     
 
   if (window.location.pathname === "/finalpage.html") {
       console.log("we are on the final page");
       console.log(moodObject);
 
+    var jokes = JSON.parse(localStorage.getItem("jokeObject"));
 
       $("#gif").attr("src", moodObject.gifurl)
+    console.log(jokes);
+      $("#setup").text(jokes.setup);
+      $("#punchline").text(jokes.punchline);
 
-      $("#joke").text(moodObject.joke)
-
-      $("#music").text(moodObject.music)
+    console.log(moodObject.music);
+    $('#music-video').attr('src', 'https://www.youtube.com/embed/' + moodObject.music.items[0].id.videoId)
+      
+      
 
   }
 console.log(window.location.pathname)
