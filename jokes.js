@@ -371,14 +371,26 @@ var jokesArray= [];
 
 
 function getJoke(choice){
-
+ 
+  
 for (var i= 0; i < jokeData.length; i++){
 
   if (jokeData[i].type==choice){
 
-      jokesArray.push(jokeData[i])
+      jokesArray.push(jokeData[i]);
+
+     jokeObject = jokesArray[jokeNumber];
+
+        
+     if (jokeObject === null) {
+    jokeObject={};
+}
+
+      
 
   }
+  
+  
 }
 
 
@@ -386,8 +398,10 @@ for (var i= 0; i < jokeData.length; i++){
      var jokeNumber=    (Math.floor(Math.random() * 10));
 
      console.log(jokesArray[jokeNumber]);
-     return jokesArray[jokeNumber];
+      jokesArray[jokeNumber];
 
+localStorage.setItem("jokeObject", JSON.stringify(jokesArray[jokeNumber]));
+        window.location.href = "music.html";
     
 
 }
